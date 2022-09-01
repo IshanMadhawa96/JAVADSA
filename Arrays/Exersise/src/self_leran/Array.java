@@ -35,5 +35,21 @@ public class Array {
             System.out.println(items[i]);
         }
     }
+    //implement remove method
+    public void removeAt(int index){
+        //validate the index
+        if(index<0 || index>=count){
+            throw new IllegalArgumentException();
+        }
+        //shift the items to left to fill the hole
+        // [10, 30, 40]
+        // index: 1
+        // 1 <- 2
+        // 2 <-3
+        for(int i=index;i<count;i ++){
+            items[i] = items[i+1];
+        }
+        count --;
+    }
 
 }
