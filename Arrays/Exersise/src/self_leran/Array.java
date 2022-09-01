@@ -51,5 +51,18 @@ public class Array {
         }
         count --;
     }
+    //serach operation
+    //best case scenario
+    //0(1)
+     //worst case senario 0(n)
+    public int indexOf(int item){
+        //If we find it,return index
+        //otherwise return -1
+        for(int i=0;i<count;i++){
+            if(items[i]==item)
+                return i;
+        }
+        return -1;
+    }
 
 }
