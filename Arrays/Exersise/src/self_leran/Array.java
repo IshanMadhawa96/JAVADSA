@@ -11,6 +11,24 @@ public class Array {
         // assign array length via constructer
         items = new int[length];
     }
+
+    //insert new element to array
+    public void insert(int item){
+        //if the array is full resize it
+        if(items.length==count){
+            //create a new array(twice the size)
+            int[] newItems = new int[count*2];
+            //copy all existing items
+            for(int i=0;i<count;i ++){
+               newItems[i]=items[i];
+            }
+            //set items to this new array
+            items = newItems;
+        }
+        //Add the new Item at the end of array
+        items[count++] = item;
+
+    }
     //printing array
     public void print(){
         for(int i=0;i<count;i ++){
